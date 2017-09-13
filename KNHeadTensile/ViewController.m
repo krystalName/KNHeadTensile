@@ -93,7 +93,7 @@ static CGFloat headHeight = 230.f;
 
 -(UIImageView *)headImageView{
     if (!_headImageView) {
-        _headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, ration * kScreenWidth)];
+        _headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0,64, kScreenWidth, ration * kScreenWidth)];
         _headImageView.image = [UIImage imageNamed:@"headView"];
         self.originalRect = _headImageView.frame;
     }
@@ -102,7 +102,7 @@ static CGFloat headHeight = 230.f;
 
 -(UIView *)TableheadView{
     if (!_TableheadView) {
-        _TableheadView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, headHeight)];
+        _TableheadView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, headHeight)];
         _TableheadView.backgroundColor = [UIColor clearColor];
     }
     return _TableheadView;
@@ -110,7 +110,7 @@ static CGFloat headHeight = 230.f;
 
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.dataSource = self;
